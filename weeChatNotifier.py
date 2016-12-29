@@ -1,24 +1,20 @@
-# Requires `brew install terminal-notifier`
-
 import os
 import datetime
 import weechat
+from subprocess import call
 
 # Information and function call to register script with Weechat (required)
-SCRIPT_NAME = 'WeeNotify'
+SCRIPT_NAME = 'i3MatrixNotications'
 SCRIPT_AUTHOR = 'Oscar Martinez <omart0725@gmail.com>'
 SCRIPT_VERSION = '1.0'
 SCRIPT_LICENSE = 'GPL'
-SCRIPT_DESC = 'Get notifications from Weechat as a Mac Notification'
+SCRIPT_DESC = 'Get notifications from Weechat as a Notification'
 weechat.register(SCRIPT_NAME, SCRIPT_AUTHOR, SCRIPT_VERSION, SCRIPT_LICENSE, SCRIPT_DESC, '', '')
 
 
-# The notification function
 def notify(title, subtitle, message):
-    t = '-title {!r}'.format(title)
-    s = '-subtitle {!r}'.format(subtitle)
-    m = '-message {!r}'.format(message)
-    os.system('terminal-notifier {}'.format(' '.join([m, t, s])))
+    call(["notify-send", title, subtitle + "\n" + message])
+
 
 # Function that gets messages on all buffers (sorted out by given restrictions on time and tags)
 def get_message(data, buffer, date, tags, is_displayed, is_highlight, prefix, message):
