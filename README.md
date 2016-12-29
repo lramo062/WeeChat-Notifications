@@ -6,7 +6,7 @@ WeeChat-Notificatoins is a plugin for WeeChat, a CLI chat client on linux with i
 * Uses dunst & notify-send to display notifications.
 
 
-![Alt text](/weeNotifyPic.png?raw=true "Script in Action")
+![Alt text](https://github.com/lramo062/WeeChat-Notifications/blob/master/2016-12-29-171614_4480x1080_scrot.png "Script in Action")
 
 # Instructions for Use:
   1. Make sure you have the following installed:
@@ -33,7 +33,7 @@ WeeChat-Notificatoins is a plugin for WeeChat, a CLI chat client on linux with i
   ```
     ln -s ../weeNotify.py
   ```
-   6. Add the dunstrc file to correct path
+  6. Add the dunstrc file to correct path
   
   ```
     cp dunstrc /usr/share/dunstrc
