@@ -1,5 +1,5 @@
 # WeeChat-Notifications
-WeeChat-Notificatoins is a plugin for WeeChat, a CLI chat client. 
+WeeChat-Notificatoins is a plugin for WeeChat, a CLI chat client on linux with i3-wm instructions.
 
 * Forked from https://github.com/omart075/WeeNotifyMatrix.
 * WeeChat-Notifications displays a notification whenever a message is received on any buffer you have on WeeChat.
